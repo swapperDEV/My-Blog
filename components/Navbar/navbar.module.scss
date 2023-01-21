@@ -1,0 +1,53 @@
+@import "../../styles/fonts.scss";
+@import "../../styles/colors.scss";
+.navbar {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  section {
+    width: 1200px;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    font-family: "Rubik", sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    flex-direction: row;
+  }
+  .author {
+    font-size: 1.3rem;
+    flex-grow: 1;
+    transition: 0.1s ease;
+    font-weight: 700;
+    :first-child {
+      color: $content;
+    }
+  }
+  .author:hover {
+    cursor: pointer;
+    filter: blur(0.5px);
+  }
+  nav {
+    margin-right: 25px;
+    ul {
+      color: #52526f;
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+      align-items: center;
+      li {
+        padding-left: 10px;
+        padding-right: 10px;
+        transition: 0.1s ease;
+      }
+      li:hover {
+        cursor: pointer;
+        color: gray;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import "../../../styles/fonts.scss";
+@import "../../../styles/colors.scss";
+.button {
+  background-color: $content;
+  border: 3px solid $content;
+  padding: 12px;
+  border-radius: 6px;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  padding-left: 18px;
+  padding-right: 18px;
+  font-size: 1rem;
+  transition: 0.1s ease;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: $content;
+  border: 3px solid $content;
+}
