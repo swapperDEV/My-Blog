@@ -2,25 +2,34 @@ import Image from "next/image";
 import React from "react";
 import { Button } from "../UI/Button/Button";
 import styles from "./header.module.scss";
-export const Header = () => {
+import { FaGithub, FaDiscord } from "react-icons/fa";
+type HeaderProps = {
+  titleFirst: string;
+  titleSecond: string;
+  description: string;
+  buttons: Array<JSX.Element>;
+};
+
+export const Header = ({
+  titleFirst,
+  titleSecond,
+  description,
+  buttons,
+}: HeaderProps) => {
   return (
     <section className={styles.header}>
       <div className={styles.content}>
         <header>
           <p className={styles.title}>
-            Cześć, jestem Wiktor. Projektuje strony internetowe
+            {titleFirst}
+            <a>.</a> {titleSecond}
+            <a>.</a>
           </p>
-          <p className={styles.description}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Perferendis doloribus fuga sapiente soluta praesentium. Aliquid!
-          </p>
+          <p className={styles.description}>{description}</p>
           <div className={styles.buttons}>
-            <Button>
-              <>Testxx</>
-            </Button>
-            <Button>
-              <>Brakxx</>
-            </Button>
+            {buttons.map((btn: JSX.Element) => {
+              return <Button key={btn.key}>{btn}</Button>;
+            })}
           </div>
         </header>
         <picture>

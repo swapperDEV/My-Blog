@@ -3,14 +3,20 @@
 .button {
   background-color: $content;
   border: 3px solid $content;
-  padding: 12px;
   border-radius: 6px;
   color: white;
   font-family: "Rubik", sans-serif;
-  padding-left: 18px;
-  padding-right: 18px;
   font-size: 1rem;
   transition: 0.1s ease;
+  padding: 12px;
+  padding-left: 18px;
+  padding-right: 18px;
+  svg {
+    transform: scale(1.5);
+  }
+  p {
+    padding: 0px;
+  }
 }
 .button:hover {
   cursor: pointer;

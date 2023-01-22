@@ -1,0 +1,62 @@
+@import "../../styles/fonts.scss";
+@import "../../styles/colors.scss";
+
+.section {
+  background-color: white;
+  display: flex;
+  padding-top: 80px;
+  justify-content: center;
+  padding-bottom: 80px;
+  font-family: "Rubik", sans-serif;
+  .sectionContent {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    .pic {
+      margin-right: 20px;
+      width: 50%;
+
+      > div {
+        position: unset !important;
+      }
+
+      .img {
+        object-fit: contain;
+        width: 100% !important;
+        position: relative !important;
+        height: unset !important;
+      }
+    }
+
+    .text {
+      margin-left: 20px;
+      width: 800px;
+      text-align: flex-start;
+      padding-bottom: 40px;
+      .title {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        p {
+          color: $content;
+          font-weight: 700;
+          font-size: 1.7rem;
+        }
+      }
+      .lowertitle {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .description {
+        margin-bottom: 20px;
+        a {
+          color: $content;
+        }
+      }
+    }
+  }
+}
