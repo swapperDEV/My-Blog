@@ -1,10 +1,27 @@
 @import "../../styles/fonts.scss";
 @import "../../styles/colors.scss";
+.line {
+  height: 107px;
+}
+.diving {
+  position: fixed;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  top: 0%;
+  width: 100%;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+  z-index: 99;
+  section {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+}
 .navbar {
   background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.1s ease;
   padding-top: 9px;
   padding-bottom: 9px;
   section {
