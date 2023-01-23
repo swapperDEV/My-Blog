@@ -9,8 +9,10 @@ export const Footer = () => {
             Wiktor <a>Maciążek</a>
           </p>
         </div>
-        <div>Wiktor Maciążek © 2023. Images doodleipsum.com</div>
+        <div>Wiktor Maciążek © 2023 for wiktormaciazek.pl.</div>
       </footer>
     </section>
   );
 };
+
+// Images doodleipsum.com

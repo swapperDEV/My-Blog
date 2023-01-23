@@ -65,6 +65,7 @@ export default function Page() {
         />
         <Section
           title={"Umiejętności"}
+          lowertitle={"Technologie z którymi pracuję"}
           content={
             <BoxContainer>
               <>
@@ -85,6 +86,7 @@ export default function Page() {
         />
         <Section
           title={"Projekty"}
+          lowertitle={"Tu znajdziesz wszystkie moje projekty."}
           bgColor={"white"}
           content={
             <ProjectsWrapper>

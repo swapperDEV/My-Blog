@@ -9,7 +9,7 @@ export const ContactSection = () => {
       <a>
         Chętnie odpowiem na twoje pytania <FaPhone />
       </a>
-      <p>Lub pomogę w realizacjach.</p>
+      <p>WRZUCIC TUTAJ FORMIK I UPPER FAQ.</p>
       <div>
         <button className={styles.btnWhite}>Skontaktuj się ze mną</button>
         <button className={styles.btnTr}>Poczytaj mojego bloga</button>
