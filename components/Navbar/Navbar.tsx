@@ -3,19 +3,16 @@ import { Button } from "../UI/Button/Button";
 import styles from "./navbar.module.scss";
 
 export const Navbar = () => {
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
 
   const handleScroll = () => {
     const currentScrollPos = window.scrollY;
 
-    if (currentScrollPos > prevScrollPos) {
+    if (currentScrollPos > 10) {
       setVisible(false);
     } else {
       setVisible(true);
     }
-
-    setPrevScrollPos(currentScrollPos);
   };
 
   useEffect(() => {
@@ -35,8 +32,8 @@ export const Navbar = () => {
           <nav>
             <ul>
               <li>O mnie</li>
-              <li>Projekty</li>
               <li>Skills</li>
+              <li>Projekty</li>
               <li>Blog</li>
               <li>FAQ</li>
             </ul>

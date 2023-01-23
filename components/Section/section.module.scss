@@ -20,6 +20,33 @@
       flex-direction: row;
       justify-content: space-between;
     }
+    .textAlign {
+      width: 100%;
+      text-align: left;
+      .title {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        p {
+          color: $content;
+          font-weight: 700;
+          font-size: 1.4rem;
+        }
+      }
+      .lowertitle {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        margin-top: 0px;
+      }
+      .description {
+        a {
+          color: $content;
+        }
+      }
+    }
     .text {
       width: 800px;
       text-align: CENTER;

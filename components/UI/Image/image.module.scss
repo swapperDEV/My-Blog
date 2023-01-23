@@ -1,0 +1,38 @@
+.pic {
+  margin-right: 20px;
+  width: 50%;
+
+  > div {
+    position: unset !important;
+  }
+
+  .img {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
+}
+
+.picAnim {
+  margin-right: 20px;
+  width: 50%;
+  overflow: hidden;
+  border-radius: 20px;
+
+  > div {
+    position: unset !important;
+  }
+
+  .img {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+    transition: 0.1s ease;
+  }
+  .img:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+  }
+}

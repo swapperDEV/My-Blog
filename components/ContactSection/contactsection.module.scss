@@ -1,0 +1,59 @@
+@import "../../styles/fonts.scss";
+@import "../../styles/colors.scss";
+
+.section {
+  font-family: "Rubik", sans-serif;
+  background-color: $content;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+  a {
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      margin-left: 10px;
+    }
+  }
+  div {
+    display: flex;
+  }
+  button {
+    margin-right: 5px;
+    margin-left: 5px;
+    color: black;
+    padding: 14px;
+    border: 3px solid white;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-family: "Rubik", sans-serif;
+    padding-left: 35px;
+    padding-right: 35px;
+    transition: 0.2s ease;
+  }
+  button:hover {
+    cursor: pointer;
+  }
+  .btnTr {
+    color: white;
+    background-color: transparent;
+    border: 3px solid white;
+  }
+  .btnTr:hover {
+    border: 3px solid white;
+    color: black;
+    background-color: white;
+  }
+}

@@ -1,6 +1,6 @@
-import Image from "next/image";
 import React from "react";
 import { Button } from "../UI/Button/Button";
+import { ResponsiveImage } from "../UI/Image/Image";
 import styles from "./imgsection.module.scss";
 type SectionProps = {
   title: string;
@@ -19,14 +19,7 @@ export const ImgSection = ({
   return (
     <section className={styles.section}>
       <div className={styles.sectionContent}>
-        <div className={styles.pic}>
-          <Image
-            alt={"picture"}
-            layout="fill"
-            className={styles.img}
-            src={`${img}`}
-          />
-        </div>
+        <ResponsiveImage src={img} />
         <div className={styles.text}>
           <div className={styles.title}>
             <p>{title}</p>

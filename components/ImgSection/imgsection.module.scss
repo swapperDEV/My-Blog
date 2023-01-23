@@ -13,21 +13,6 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    .pic {
-      margin-right: 20px;
-      width: 50%;
-
-      > div {
-        position: unset !important;
-      }
-
-      .img {
-        object-fit: contain;
-        width: 100% !important;
-        position: relative !important;
-        height: unset !important;
-      }
-    }
 
     .text {
       margin-left: 20px;

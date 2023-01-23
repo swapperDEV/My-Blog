@@ -1,0 +1,92 @@
+export const skills = [
+  {
+    path: "https://media.graphassets.com/Oig5u39yQQio4sOxaOnv",
+    bgColor: "rgb(248, 120, 27)",
+    color: "white",
+    name: "html",
+  },
+  {
+    path: "https://media.graphassets.com/HNTPP8OoRSC4DGfOezMg",
+    bgColor: "rgb(70, 83, 198)",
+    color: "white",
+    name: "css",
+  },
+  {
+    path: "https://media.graphassets.com/YCbuS6QGlvi7m2UZfSQU",
+    bgColor: "rgb(214, 138, 226)",
+    color: "white",
+    name: "scss",
+  },
+  {
+    path: "https://media.graphassets.com/fesCGBNzQQyFg9NahZpO",
+    bgColor: "rgb(255, 224, 63)",
+    color: "black",
+    name: "javascript",
+  },
+  {
+    path: "https://media.graphassets.com/48Rw9y8VQqjN2WldO4Pb",
+    bgColor: "rgb(72, 233, 255)",
+    color: "black",
+    name: "react",
+  },
+  {
+    path: "/assets/lang/next.svg",
+    bgColor: "lightgray",
+    color: "black",
+    name: "nextjs",
+  },
+  {
+    path: "/assets/lang/redux.svg",
+    bgColor: "purple",
+    color: "white",
+    name: "redux",
+  },
+  {
+    path: "/assets/lang/node.svg",
+    bgColor: "#333333",
+    color: "white",
+    name: "node js",
+  },
+  {
+    path: "/assets/lang/express.svg",
+    bgColor: "rgb(82, 193, 93)",
+    color: "black",
+    name: "express",
+  },
+  {
+    path: "https://media.graphassets.com/Q18BMWceQ726PkVKKW2U",
+    bgColor: "rgb(117, 44, 175)",
+    color: "white",
+    name: "python",
+  },
+  {
+    path: "https://media.graphassets.com/Dh6RFahtTauPpJbIwEk1",
+    bgColor: "rgb(232, 77, 49)",
+    color: "white",
+    name: "git",
+  },
+  {
+    path: "https://media.graphassets.com/JuTIIOG5TBaJ5moPLGAQ",
+    bgColor: "rgb(87, 42, 42)",
+    color: "white",
+    name: "sql / postgresql",
+  },
+  {
+    path: "/assets/lang/mongo.svg",
+    bgColor: "rgb(82, 193, 93)",
+    color: "white",
+    name: "mongodb",
+  },
+  {
+    path: "https://media.graphassets.com/XJrOGTQFyiPaAOp7jYw4",
+    bgColor: "rgb(66, 82, 221)",
+    color: "white",
+    name: "typescript",
+  },
+  {
+    path: "/assets/lang/yarn.svg",
+    bgColor: "cadetblue",
+    color: "white",
+    name: "yarn",
+  },
+];

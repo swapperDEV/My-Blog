@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { Button } from "../UI/Button/Button";
 import styles from "./header.module.scss";
-import { FaGithub, FaDiscord } from "react-icons/fa";
+import { ResponsiveImage } from "../UI/Image/Image";
 type HeaderProps = {
   titleFirst: string;
   titleSecond: string;
@@ -32,9 +32,7 @@ export const Header = ({
             })}
           </div>
         </header>
-        <picture>
-          <Image src="/assets/hero.png" width="520" height="320" alt="hero" />
-        </picture>
+        <ResponsiveImage src={"/assets/hero.png"} />
       </div>
     </section>
   );

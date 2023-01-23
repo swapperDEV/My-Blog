@@ -6,100 +6,18 @@ import { ImgSection } from "../components/ImgSection/ImgSection";
 import { Box } from "../components/UI/Box/Box";
 import { TechBox } from "../components/UI/TechBox/TechBox";
 import { BoxContainer } from "../components/UI/BoxContainer/BoxContainer";
+import { Project } from "../components/Project/Project";
+import { ProjectsWrapper } from "../components/UI/ProjectsWrapper/ProjectsWrapper";
+import { Logo } from "../components/UI/Logo/Logo";
+import { skills } from "../utils/skills";
+import { projects } from "../utils/projects";
+import { BlogPreview } from "../components/BlogPreview/BlogPreview";
+import { Contact } from "../components/Contact/Contact";
+import { Button } from "../components/UI/Button/Button";
+import { ContactSection } from "../components/ContactSection/ContactSection";
+import { Footer } from "../components/Footer/Footer";
 
 export default function Page() {
-  const skills = [
-    {
-      path: "https://media.graphassets.com/Oig5u39yQQio4sOxaOnv",
-      bgColor: "rgb(248, 120, 27)",
-      color: "white",
-      name: "html",
-    },
-    {
-      path: "https://media.graphassets.com/HNTPP8OoRSC4DGfOezMg",
-      bgColor: "rgb(70, 83, 198)",
-      color: "white",
-      name: "css",
-    },
-    {
-      path: "https://media.graphassets.com/YCbuS6QGlvi7m2UZfSQU",
-      bgColor: "rgb(214, 138, 226)",
-      color: "white",
-      name: "scss",
-    },
-    {
-      path: "https://media.graphassets.com/fesCGBNzQQyFg9NahZpO",
-      bgColor: "rgb(255, 224, 63)",
-      color: "black",
-      name: "javascript",
-    },
-    {
-      path: "https://media.graphassets.com/48Rw9y8VQqjN2WldO4Pb",
-      bgColor: "rgb(72, 233, 255)",
-      color: "black",
-      name: "react",
-    },
-    {
-      path: "/assets/lang/next.svg",
-      bgColor: "lightgray",
-      color: "black",
-      name: "nextjs",
-    },
-    {
-      path: "/assets/lang/redux.svg",
-      bgColor: "purple",
-      color: "white",
-      name: "redux",
-    },
-    {
-      path: "/assets/lang/node.svg",
-      bgColor: "#333333",
-      color: "white",
-      name: "node js",
-    },
-    {
-      path: "/assets/lang/express.svg",
-      bgColor: "rgb(82, 193, 93)",
-      color: "black",
-      name: "express",
-    },
-    {
-      path: "https://media.graphassets.com/Q18BMWceQ726PkVKKW2U",
-      bgColor: "rgb(117, 44, 175)",
-      color: "white",
-      name: "python",
-    },
-    {
-      path: "https://media.graphassets.com/Dh6RFahtTauPpJbIwEk1",
-      bgColor: "rgb(232, 77, 49)",
-      color: "white",
-      name: "git",
-    },
-    {
-      path: "https://media.graphassets.com/JuTIIOG5TBaJ5moPLGAQ",
-      bgColor: "rgb(87, 42, 42)",
-      color: "white",
-      name: "sql / postgresql",
-    },
-    {
-      path: "/assets/lang/mongo.svg",
-      bgColor: "rgb(82, 193, 93)",
-      color: "white",
-      name: "mongodb",
-    },
-    {
-      path: "https://media.graphassets.com/XJrOGTQFyiPaAOp7jYw4",
-      bgColor: "rgb(66, 82, 221)",
-      color: "white",
-      name: "typescript",
-    },
-    {
-      path: "/assets/lang/yarn.svg",
-      bgColor: "cadetblue",
-      color: "white",
-      name: "yarn",
-    },
-  ];
   return (
     <>
       <Navbar />
@@ -165,6 +83,48 @@ export default function Page() {
             </BoxContainer>
           }
         />
+        <Section
+          title={"Projekty"}
+          bgColor={"white"}
+          content={
+            <ProjectsWrapper>
+              <>
+                {projects.map((project, index) => {
+                  return (
+                    <Project
+                      key={index}
+                      stack={
+                        <>
+                          {project.stack.map((stack, index) => {
+                            return <Logo src={stack} key={index} />;
+                          })}
+                        </>
+                      }
+                      title={project.title}
+                      description={project.description}
+                      src={project.src}
+                      badge={project.badge}
+                    />
+                  );
+                })}
+              </>
+            </ProjectsWrapper>
+          }
+        />
+        <Section
+          title={"Blog"}
+          lowertitle={"Najnowsze aktykuły na blogu 🔥"}
+          align="left"
+          content={
+            <>
+              <BlogPreview />
+              <BlogPreview />
+              <BlogPreview />
+            </>
+          }
+        />
+        <ContactSection />
+        <Footer />
       </main>
     </>
   );
