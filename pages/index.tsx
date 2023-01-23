@@ -134,4 +134,4 @@ export default function Page() {
 
 //https://grzegorzpokorski.pl/o-mnie
 //https://revku.dev/
-//story book
+//EN VERSION PLS
