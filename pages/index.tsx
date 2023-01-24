@@ -56,6 +56,7 @@ export default function Page() {
       <main>
         <Section
           title={"Oferta"}
+          id={"oferta"}
           lowertitle={"Znajdziesz tu to co potrzebujesz."}
           description={
             <>

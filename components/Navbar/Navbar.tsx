@@ -33,28 +33,33 @@ export const Navbar = () => {
           <nav>
             <ul>
               <li>
-                <Link smooth spy to="start">
+                <Link smooth spy to="start" activeClass={styles.active}>
                   Start
                 </Link>
               </li>
               <li>
-                <Link smooth spy to="omnie">
+                <Link smooth spy to="oferta" activeClass={styles.active}>
+                  Oferta
+                </Link>
+              </li>
+              <li>
+                <Link smooth spy to="omnie" activeClass={styles.active}>
                   O mnie
                 </Link>
               </li>
               <li>
-                <Link smooth spy to="skills">
+                <Link smooth spy to="skills" activeClass={styles.active}>
                   Umiejętności
                 </Link>
               </li>
 
               <li>
-                <Link smooth spy to="projects">
+                <Link smooth spy to="projects" activeClass={styles.active}>
                   Projekty
                 </Link>
               </li>
               <li>
-                <Link smooth spy to="blog">
+                <Link smooth spy to="blog" activeClass={styles.active}>
                   Blog
                 </Link>
               </li>

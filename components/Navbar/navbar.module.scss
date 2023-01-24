@@ -1,5 +1,8 @@
 @import "../../styles/fonts.scss";
 @import "../../styles/colors.scss";
+.active {
+  color: $content;
+}
 .line {
   height: 107px;
 }
