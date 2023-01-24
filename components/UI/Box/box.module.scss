@@ -7,6 +7,9 @@
   -moz-box-shadow: 8px 7px 43px -19px rgba(141, 149, 255, 1);
   box-shadow: 8px 7px 43px -19px rgba(141, 149, 255, 1);
   width: 32%;
+  display: flex;
+  flex-direction: column;
+
   padding: 18px;
   .top {
     display: flex;
@@ -33,11 +36,16 @@
     padding: 10px;
     color: rgb(65, 64, 64);
   }
+  .down {
+    display: flex;
+    flex-grow: 1;
+  }
   .more {
     padding: 10px;
     color: $content;
     display: flex;
     align-items: center;
+    align-items: flex-end;
     transition: 0.1s ease;
     padding-bottom: 3px;
   }

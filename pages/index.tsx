@@ -1,6 +1,14 @@
 import { Header } from "../components/Header/Header";
 import { Navbar } from "../components/Navbar/Navbar";
-import { FaGithub, FaDiscord } from "react-icons/fa";
+import {
+  FaGithub,
+  FaDiscord,
+  FaDesktop,
+  FaBlog,
+  FaShopify,
+  FaShoppingBasket,
+  FaPaintBrush,
+} from "react-icons/fa";
 import { Section } from "../components/Section/Section";
 import { ImgSection } from "../components/ImgSection/ImgSection";
 import { Box } from "../components/UI/Box/Box";
@@ -14,7 +22,6 @@ import { projects } from "../utils/projects";
 import { BlogPreview } from "../components/BlogPreview/BlogPreview";
 import { Contact } from "../components/Contact/Contact";
 import { Footer } from "../components/Footer/Footer";
-import { Slide, Zoom } from "react-awesome-reveal";
 export default function Page() {
   return (
     <>
@@ -52,13 +59,37 @@ export default function Page() {
           lowertitle={"Znajdziesz tu to co potrzebujesz."}
           description={
             <>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos hic
-              aliquid dolores, cum consectetur labore quasi ratione mollitia
-              impedit <a>inventore nisi ducimus!</a> Totam tenetur iure
-              necessitatibus suscipit, placeat accusantium ea!
+              Poniżej widnieje moja oferta, nie trzymam się jej oczywiście
+              <a> regorystycznie</a> to tylko najczęsciej wykonywane rzeczy,
+              skontaktuj się ze mną po niestandardowe zlecenia!
             </>
           }
-          content={[<Box key={"1"} />, <Box key={"2"} />, <Box key={"3"} />]}
+          content={[
+            <Box
+              key={"1"}
+              title={"Kodowanie statycznych stron"}
+              icon={<FaDesktop />}
+              description={
+                "Jeżeli posiadasz już gotowy szablon swojej strony, mogę go zaprojektować. Jest to najszybszy sposób wykonania strony. Dodatkowo późniejsze zmiany nie będą problemem"
+              }
+            />,
+            <Box
+              icon={<FaShoppingBasket />}
+              key={"2"}
+              title={"Kodowanie dynamicznych stron"}
+              description={
+                "Mogę stworzyć dla ciebie dynamiczne strony takie jak blogi, sklepy itd. których contentem sam będziesz zarządzał za pomocą autorskiego panelu."
+              }
+            />,
+            <Box
+              key={"3"}
+              icon={<FaPaintBrush />}
+              title={"Poprawa twojej strony internetowej"}
+              description={
+                "W mojej ofercie również znajduje się poprawa już wcześniej zaprojektowanych stron."
+              }
+            />,
+          ]}
         />
         <ImgSection
           title={"O mnie"}
@@ -66,12 +97,11 @@ export default function Page() {
           lowertitle={"Zatrzymaj się tu na chwilę 😄"}
           description={
             <>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos hic
-              aliquid dolores, cum consectetur labore quasi ratione mollitia
-              impedit <a>inventore nisi ducimus!</a> Totam tenetur iure
-              necessitatibus suscipit, placeat accusantium ea! mollitia impedit{" "}
-              <a>inventore nisi ducimus!</a> Totam tenetur iure necessitatibus
-              suscipit, placeat accusantium ea! ✨
+              Od kilku lat interesuję się szeroko pojętym{" "}
+              <a>web developmentem</a>, programowanie to jedno z moich hobby🧑‍🔧
+              na codzień jednak wciąż się
+              <a> uczę</a> w technikum, mam dopiero <a>18lat.</a> Przyszłość
+              chciałbym wiązać z tym hobby! ✨
             </>
           }
           img="/assets/home.png"

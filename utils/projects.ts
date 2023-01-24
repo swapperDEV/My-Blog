@@ -2,7 +2,7 @@ export const projects = [
   {
     title: "Library Manager",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique. quod unde. Odio, blanditiis vitae dolorem ab reprehenderit, veniam.",
+      "Library Manager, to mój pierwszy full stack project, jest to poprostu system zarządzania bibliotekami. Dodatkowo umożliwia użytkowniką biblioteki podejrzeć wypożyczone książki itd.",
     src: "/mockups/library.png",
     badge: false,
     stack: [
@@ -17,7 +17,7 @@ export const projects = [
     title: "Greenly",
     badge: false,
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique. quod unde. Odio, blanditiis vitae dolorem ab reprehenderit, veniam.",
+      "Greenly, to w pełni funkcyjny sklep internetowy z różnymi roślinami.",
     src: "/mockups/greenly.png",
     stack: [
       "/assets/lang/typescript.png",
@@ -31,7 +31,7 @@ export const projects = [
     title: "Browser Star-Page",
     badge: false,
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique. quod unde. Odio, blanditiis vitae dolorem ab reprehenderit, veniam.",
+      "Ten projekt to idealny dashboard do twojej przeglądarki, może służyć jako wielofunkcyjna strona startowa.",
     src: "/mockups/dash.png",
     stack: [
       "/assets/lang/javascript.png",
@@ -43,7 +43,7 @@ export const projects = [
     title: "Footweet",
     badge: false,
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique. quod unde. Odio, blanditiis vitae dolorem ab reprehenderit, veniam.",
+      "Footweet to klon popularnego twittera, dla fanów piłki nożnej, jest to jeden z moich pierwszych projektów.",
     src: "/mockups/footweet.png",
     stack: [
       "/assets/lang/typescript.png",
@@ -56,7 +56,7 @@ export const projects = [
     title: "Weather app",
     badge: false,
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique. quod unde. Odio, blanditiis vitae dolorem ab reprehenderit, veniam.",
+      "Weather App, to aplikacja pogodowa z interaktywną mapą w tle  oraz możliwością zlokalizowania ciebie.",
     src: "/mockups/weather.png",
     stack: [
       "/assets/lang/javascript.png",
