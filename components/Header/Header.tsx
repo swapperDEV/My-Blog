@@ -3,36 +3,54 @@ import React from "react";
 import { Button } from "../UI/Button/Button";
 import styles from "./header.module.scss";
 import { ResponsiveImage } from "../UI/Image/Image";
+import { Fade, Zoom } from "react-awesome-reveal";
 type HeaderProps = {
-  titleFirst: string;
+  titleFirst: JSX.Element;
   titleSecond: string;
   description: string;
-  buttons: Array<JSX.Element>;
+  id: string;
+  buttons: Array<{
+    element: JSX.Element;
+    link?: string;
+    scroll?: boolean;
+    scrollV?: string;
+  }>;
 };
 
 export const Header = ({
   titleFirst,
   titleSecond,
+  id,
   description,
   buttons,
 }: HeaderProps) => {
   return (
-    <section className={styles.header}>
+    <section className={styles.header} id={id}>
       <div className={styles.content}>
         <header>
           <p className={styles.title}>
             {titleFirst}
-            <a>.</a> {titleSecond}
-            <a>.</a>
+            <a>.</a> {titleSecond}.
           </p>
           <p className={styles.description}>{description}</p>
           <div className={styles.buttons}>
-            {buttons.map((btn: JSX.Element) => {
-              return <Button key={btn.key}>{btn}</Button>;
+            {buttons.map((btn, index) => {
+              return (
+                <Button
+                  key={index}
+                  link={btn.link}
+                  scroll={btn.scroll}
+                  scrollV={btn.scrollV}
+                >
+                  {btn.element}
+                </Button>
+              );
             })}
           </div>
         </header>
-        <ResponsiveImage src={"/assets/hero.png"} />
+        <div className={styles.img}>
+          <ResponsiveImage src={"/assets/flat.png"} />
+        </div>
       </div>
     </section>
   );

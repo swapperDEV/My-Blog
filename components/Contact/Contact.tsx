@@ -6,39 +6,37 @@ import { FaMailBulk } from "react-icons/fa";
 
 export const Contact = () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="contact">
       <section className={styles.contact}>
-        <div className={styles.info}>
-          <p className={styles.title}>Kontakt</p>
-          <div className={styles.line}></div>
-          <p className={styles.lowertitle}>Porozmawiajmy o Twoich potrzebach</p>
-          <p className={styles.description}>
-            Jeśli interesuje Cię współpraca lub po prostu chcesz zadać pytanie,
-            nie bój się napisać na mojego maila: <a>wiktormaciazek@gmail.com</a>{" "}
-            lub skorzystać z formularza kontaktowego. Zachęcam do zapoznania się
-            z<a> ofertą</a>, gdzie być może znajdziesz odpowiedź na swoje
-            pytanie.
-          </p>
-        </div>
         <div className={styles.bottom}>
           <div className={styles.form}>
-            <div>
-              <label></label>
+            <div className={styles.info}>
+              <p className={styles.title}>Kontakt</p>
+              <div className={styles.line}></div>
+              <p className={styles.description}>
+                Jeśli interesuje Cię współpraca nie bój się napisać na mojego
+                maila: <a>wiktormaciazek@gmail.com</a> lub skorzystać z
+                formularza kontaktowego. Zachęcam również do odwiedzenia
+                githuba, bądź do szybszego kontaktu za pomocą discord.
+              </p>
+            </div>
+            <div className={styles.input}>
+              <label>Imie*</label>
               <input />
             </div>
-            <div>
-              <label></label>
+            <div className={styles.input}>
+              <label>Nazwisko*</label>
               <input />
             </div>
-            <div>
-              <label></label>
-              <input />
+            <div className={styles.input}>
+              <label>Email</label>
+              <input type={"email"} />
             </div>
-            <div>
-              <label></label>
+            <div className={styles.input}>
+              <label>Treść wiadomości</label>
               <textarea />
             </div>
-            <div>
+            <div className={styles.inputCheck}>
               <input type="checkbox" />
               <p>
                 Wyrażam zgodę na przechowywanie przez tę witrynę przesłanych
@@ -47,7 +45,7 @@ export const Contact = () => {
                 prywatności
               </p>
             </div>
-            <div>
+            <div className={styles.buttons}>
               <Button>
                 {
                   <>
@@ -56,9 +54,6 @@ export const Contact = () => {
                 }
               </Button>
             </div>
-          </div>
-          <div className={styles.img}>
-            <ResponsiveImage src={"/assets/contact.webp"} />
           </div>
         </div>
       </section>

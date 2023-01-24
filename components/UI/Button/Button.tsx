@@ -1,5 +1,37 @@
+import Link from "next/link";
+import { Link as LinkScroll } from "react-scroll";
 import React from "react";
 import styles from "./button.module.scss";
-export const Button = ({ children }: { children: JSX.Element }) => {
-  return <button className={styles.button}>{children}</button>;
+export const Button = ({
+  children,
+  link,
+  scroll,
+  scrollV,
+}: {
+  children: JSX.Element;
+  link?: string;
+  scroll?: boolean;
+  scrollV?: string;
+}) => {
+  return (
+    <>
+      {!scroll ? (
+        <>
+          <button className={styles.button}>
+            <Link href={`${link}`} target="_blank">
+              {children}
+            </Link>
+          </button>
+        </>
+      ) : (
+        <>
+          <button className={styles.button}>
+            <LinkScroll smooth spy to={`${scrollV}`}>
+              {children}
+            </LinkScroll>
+          </button>
+        </>
+      )}
+    </>
+  );
 };

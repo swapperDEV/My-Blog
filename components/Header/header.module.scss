@@ -7,13 +7,13 @@
   display: flex;
   justify-content: center;
   .content {
-    padding-top: 90px;
+    padding-top: 150px;
     width: 1200px;
     display: flex;
     justify-content: center;
     font-family: "Rubik", sans-serif;
     align-items: center;
-    padding-bottom: 70px;
+    padding-bottom: 150px;
     header {
       .title {
         font-size: 1.5rem;
@@ -21,7 +21,11 @@
         font-size: 2.5rem;
         width: 450px;
         a {
-          color: $content;
+          animation: gradient 5s ease-in-out infinite;
+          background: linear-gradient(to right, black, gray, #2193b0, #5663d4);
+          background-size: 300%;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
       }
       .description {
@@ -43,5 +47,25 @@
       justify-content: center;
       align-items: center;
     }
+  }
+}
+
+.img {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1.5);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
   }
 }

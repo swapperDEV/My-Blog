@@ -13,24 +13,37 @@ import { skills } from "../utils/skills";
 import { projects } from "../utils/projects";
 import { BlogPreview } from "../components/BlogPreview/BlogPreview";
 import { Contact } from "../components/Contact/Contact";
-import { Button } from "../components/UI/Button/Button";
-import { ContactSection } from "../components/ContactSection/ContactSection";
 import { Footer } from "../components/Footer/Footer";
-
+import { Slide, Zoom } from "react-awesome-reveal";
 export default function Page() {
   return (
     <>
       <Navbar />
       <Header
-        titleFirst={"Cześć, jestem Wiktor"}
+        id={"start"}
+        titleFirst={
+          <>
+            Cześć, jestem <a>Wiktor</a>
+          </>
+        }
         titleSecond={"Tworzę strony internetowe"}
         description={
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis doloribus fuga sapiente soluta praesentium. Aliquid!"
+          "Serdecznie zapraszam cię do przejrzenia strony! 🚀  Zawiera ona najważniejsze informacje o mnie 🧑‍💻 Jeżeli szukasz osoby która stworzy stronę dla ciebie, tu też znajdziesz pomoc 🤯."
         }
         buttons={[
-          <FaGithub key="gt" />,
-          <FaDiscord key="dc" />,
-          <p key="txt">Skontaktuj się ze mną</p>,
+          {
+            element: <FaGithub key="gt" />,
+            link: "https://github.com/swapperDEV",
+          },
+          {
+            element: <FaDiscord key="dc" />,
+            link: "https://discordapp.com/users/565234973217521694",
+          },
+          {
+            element: <p key="txt">Skontaktuj się ze mną</p>,
+            scroll: true,
+            scrollV: "contact",
+          },
         ]}
       />
       <main>
@@ -49,6 +62,7 @@ export default function Page() {
         />
         <ImgSection
           title={"O mnie"}
+          id={"omnie"}
           lowertitle={"Zatrzymaj się tu na chwilę 😄"}
           description={
             <>
@@ -60,11 +74,12 @@ export default function Page() {
               suscipit, placeat accusantium ea! ✨
             </>
           }
-          img="/assets/hero.png"
+          img="/assets/home.png"
           button={"Zobacz moje CV"}
         />
         <Section
           title={"Umiejętności"}
+          id={"skills"}
           lowertitle={"Technologie z którymi pracuję"}
           content={
             <BoxContainer>
@@ -87,6 +102,7 @@ export default function Page() {
         <Section
           title={"Projekty"}
           lowertitle={"Tu znajdziesz wszystkie moje projekty."}
+          id={"projects"}
           bgColor={"white"}
           content={
             <ProjectsWrapper>
@@ -115,6 +131,7 @@ export default function Page() {
         />
         <Section
           title={"Blog"}
+          id={"blog"}
           lowertitle={"Najnowsze aktykuły na blogu 🔥"}
           align="left"
           content={
@@ -125,7 +142,7 @@ export default function Page() {
             </>
           }
         />
-        <ContactSection />
+        <Contact />
         <Footer />
       </main>
     </>

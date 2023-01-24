@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import React, { useEffect, useState } from "react";
 import { Button } from "../UI/Button/Button";
 import styles from "./navbar.module.scss";
@@ -31,16 +32,39 @@ export const Navbar = () => {
           </div>
           <nav>
             <ul>
-              <li>O mnie</li>
-              <li>Skills</li>
-              <li>Projekty</li>
-              <li>Blog</li>
-              <li>FAQ</li>
+              <li>
+                <Link smooth spy to="start">
+                  Start
+                </Link>
+              </li>
+              <li>
+                <Link smooth spy to="omnie">
+                  O mnie
+                </Link>
+              </li>
+              <li>
+                <Link smooth spy to="skills">
+                  Umiejętności
+                </Link>
+              </li>
+
+              <li>
+                <Link smooth spy to="projects">
+                  Projekty
+                </Link>
+              </li>
+              <li>
+                <Link smooth spy to="blog">
+                  Blog
+                </Link>
+              </li>
             </ul>
           </nav>
-          <Button>
-            <>Kontakt</>
-          </Button>
+          <div className={styles.button}>
+            <Link smooth spy to="contact">
+              Kontakt
+            </Link>
+          </div>
         </section>
       </div>
     </>

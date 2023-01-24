@@ -6,7 +6,11 @@
   justify-content: center;
   font-family: "Rubik", sans-serif;
   align-items: center;
-  background-color: #f4f9f4;
+  color: white;
+  background: url("/assets/background3.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
   .contact {
     width: 1200px;
     display: flex;
@@ -18,9 +22,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 100%;
       flex-direction: column;
       text-align: center;
-      width: 70%;
+      margin-bottom: 25px;
       .title {
         font-weight: 700;
         font-size: 1.3rem;
@@ -40,21 +45,66 @@
       .description {
         font-weight: 300;
         font-size: 1.1rem;
+        line-height: 1.3rem;
         a {
+          background-color: white;
           color: $content;
+          border-radius: 3px;
         }
       }
     }
     .bottom {
-      margin-top: 100px;
+      margin-top: 40px;
       display: flex;
       flex-direction: row;
       justify-content: center;
       padding-bottom: 120px;
       align-items: center;
       .form {
-        width: 50%;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 8px 7px 43px -19px rgb(9, 9, 12);
+        width: 700px;
         background-color: white;
+        color: rgb(55 65 81);
+        .input {
+          margin-bottom: 12px;
+          display: flex;
+          flex-direction: column;
+          input,
+          textarea {
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 3px solid #e5e7eb;
+            background-color: #f4f9f4;
+            resize: none;
+            font-family: "Rubik", sans-serif;
+            padding: 8px;
+          }
+          input {
+            font-size: 1rem;
+          }
+          input:focus,
+          textarea:focus {
+            outline: none;
+            border: 3px solid $content;
+          }
+        }
+        .inputCheck {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          margin-top: 15px;
+          margin-bottom: 25px;
+          input {
+            border: 1px solid black;
+            margin-top: 4px;
+            margin-right: 10px;
+          }
+          input:hover {
+            cursor: pointer;
+          }
+        }
       }
       .img {
         display: flex;
@@ -62,6 +112,14 @@
         align-items: center;
         flex-grow: 1;
       }
+    }
+  }
+}
+
+.buttons {
+  button {
+    svg {
+      margin-left: 6px;
     }
   }
 }

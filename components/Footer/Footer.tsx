@@ -14,5 +14,3 @@ export const Footer = () => {
     </section>
   );
 };
-
-// Images doodleipsum.com

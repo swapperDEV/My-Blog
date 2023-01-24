@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { Button } from "../UI/Button/Button";
 import { ResponsiveImage } from "../UI/Image/Image";
@@ -31,7 +32,9 @@ export const Project = ({
           <Button>{<>Kod źródłowy</>}</Button>
         </div>
       </div>
-      <ResponsiveImage anim={true} src={src} />
+      <div className={styles.imgPreview}>
+        <img src={src} alt={"mockup"} />
+      </div>
     </article>
   );
 };

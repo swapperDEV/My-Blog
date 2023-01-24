@@ -6,18 +6,20 @@ type SectionProps = {
   title: string;
   lowertitle: string;
   description: JSX.Element;
+  id?: string;
   img: string;
   button: string;
 };
 export const ImgSection = ({
   title,
   lowertitle,
+  id,
   description,
   img,
   button,
 }: SectionProps) => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id={id}>
       <div className={styles.sectionContent}>
         <ResponsiveImage src={img} />
         <div className={styles.text}>

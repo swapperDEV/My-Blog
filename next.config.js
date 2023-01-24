@@ -3,7 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     dangerouslyAllowSVG: true,
-    domains: ["media.graphcms.com", "media.graphassets.com", "viget.imgix.net"],
+    domains: [
+      "doodleipsum.com",
+      "media.graphcms.com",
+      "media.graphassets.com",
+      "viget.imgix.net",
+    ],
   },
 };
 
