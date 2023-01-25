@@ -46,7 +46,7 @@ export const Contact = () => {
               </p>
             </div>
             <div className={styles.buttons}>
-              <Button>
+              <Button link="/">
                 {
                   <>
                     Wyślij wiadomość <FaMailBulk />

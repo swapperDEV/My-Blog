@@ -1,11 +1,18 @@
-import { Link } from "react-scroll";
+import { Link as PageLink } from "react-scroll";
 import React, { useEffect, useState } from "react";
-import { Button } from "../UI/Button/Button";
 import styles from "./navbar.module.scss";
+import Hamburger from "hamburger-react";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 export const Navbar = () => {
+  const router = useRouter();
   const [visible, setVisible] = useState(true);
-
+  const [home, setHome] = useState(true);
+  const [navDisplay, changeNavDisplay] = useState(false);
+  const navToggle = () => {
+    changeNavDisplay(!navDisplay);
+  };
   const handleScroll = () => {
     const currentScrollPos = window.scrollY;
 
@@ -21,6 +28,20 @@ export const Navbar = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   });
+  useEffect(() => {
+    if (router.pathname !== "/") {
+      setHome(false);
+    }
+  }, []);
+  const nav = [
+    { name: "Start", link: "start" },
+    { name: "Oferta", link: "oferta" },
+    { name: "O mnie", link: "omnie" },
+    { name: "Umiejętności", link: "skills" },
+    { name: "Projekty", link: "projects" },
+    { name: "Blog", link: "/blog", external: true },
+  ];
+  const navFlex = [{ name: "Home", link: "/" }];
   return (
     <>
       <div className={!visible ? styles.line : styles.none}></div>
@@ -32,43 +53,108 @@ export const Navbar = () => {
           </div>
           <nav>
             <ul>
-              <li>
-                <Link smooth spy to="start" activeClass={styles.active}>
-                  Start
-                </Link>
-              </li>
-              <li>
-                <Link smooth spy to="oferta" activeClass={styles.active}>
-                  Oferta
-                </Link>
-              </li>
-              <li>
-                <Link smooth spy to="omnie" activeClass={styles.active}>
-                  O mnie
-                </Link>
-              </li>
-              <li>
-                <Link smooth spy to="skills" activeClass={styles.active}>
-                  Umiejętności
-                </Link>
-              </li>
-
-              <li>
-                <Link smooth spy to="projects" activeClass={styles.active}>
-                  Projekty
-                </Link>
-              </li>
-              <li>
-                <Link smooth spy to="blog" activeClass={styles.active}>
-                  Blog
-                </Link>
-              </li>
+              {home ? (
+                <>
+                  {nav.map((link) => {
+                    return (
+                      <li key={link.name}>
+                        {link.external ? (
+                          <>
+                            <li key={link.name}>
+                              <Link href={link.link}>{link.name}</Link>
+                            </li>
+                          </>
+                        ) : (
+                          <>
+                            {" "}
+                            <PageLink
+                              smooth
+                              spy
+                              to={link.link}
+                              activeClass={styles.active}
+                            >
+                              {link.name}
+                            </PageLink>
+                          </>
+                        )}
+                      </li>
+                    );
+                  })}
+                </>
+              ) : (
+                <>
+                  {navFlex.map((link) => {
+                    return (
+                      <li key={link.name}>
+                        <Link href={link.link}>{link.name}</Link>
+                      </li>
+                    );
+                  })}
+                </>
+              )}
             </ul>
           </nav>
           <div className={styles.button}>
-            <Link smooth spy to="contact">
+            <PageLink smooth spy to="contact">
               Kontakt
-            </Link>
+            </PageLink>
+          </div>
+          <div className={styles.burger}>
+            <Hamburger
+              distance="lg"
+              size={28}
+              toggled={navDisplay}
+              toggle={navToggle}
+            />
+          </div>
+          <div
+            className={`${
+              navDisplay ? styles.mobileNav : styles.mobileNavRight
+            } ${!visible ? styles.mobileNavDown : styles.none}`}
+          >
+            <ul>
+              {home ? (
+                <>
+                  {nav.map((link) => {
+                    return (
+                      <li key={link.name}>
+                        {link.external ? (
+                          <>
+                            <Link href={link.link}>{link.name}</Link>
+                          </>
+                        ) : (
+                          <>
+                            <PageLink
+                              smooth
+                              spy
+                              to={link.link}
+                              activeClass={styles.active}
+                            >
+                              {link.name}
+                            </PageLink>
+                          </>
+                        )}
+                      </li>
+                    );
+                  })}
+                </>
+              ) : (
+                <>
+                  {navFlex.map((link) => {
+                    return (
+                      <li key={link.name}>
+                        <Link href={link.link}>{link.name}</Link>
+                      </li>
+                    );
+                  })}
+                </>
+              )}
+            </ul>
+            <div className={styles.buttonNav}>
+              <PageLink smooth spy to="contact">
+                Kontakt
+              </PageLink>
+            </div>
           </div>
         </section>
       </div>

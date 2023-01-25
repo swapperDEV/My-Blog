@@ -12,6 +12,10 @@ export const projects = [
       "/assets/lang/express.svg",
       "/assets/lang/next.svg",
     ],
+    link: {
+      live: "https://github.com/swapperDEV/Library-Manager",
+      code: "https://github.com/swapperDEV/Library-Manager",
+    },
   },
   {
     title: "Greenly",
@@ -26,6 +30,10 @@ export const projects = [
       "/assets/lang/next.svg",
       "/assets/lang/redux.svg",
     ],
+    link: {
+      live: "https://sparkling-yeot-930b1d.netlify.app/",
+      code: "https://github.com/swapperDEV/Greenly",
+    },
   },
   {
     title: "Browser Star-Page",
@@ -38,6 +46,10 @@ export const projects = [
       "/assets/lang/scss.png",
       "/assets/lang/react.svg",
     ],
+    link: {
+      live: "https://wizardly-stonebraker-79b681.netlify.app/",
+      code: "https://github.com/swapperDEV/Browser-StartPage-React",
+    },
   },
   {
     title: "Footweet",
@@ -51,6 +63,10 @@ export const projects = [
       "/assets/lang/firebase.png",
       "/assets/lang/next.svg",
     ],
+    link: {
+      live: "https://comforting-gelato-5ad664.netlify.app/",
+      code: "https://github.com/swapperDEV/FooTweet",
+    },
   },
   {
     title: "Weather app",
@@ -63,5 +79,9 @@ export const projects = [
       "/assets/lang/scss.png",
       "/assets/lang/html.png",
     ],
+    link: {
+      live: "https://swapperdev.github.io/WeatherAPP/",
+      code: "https://github.com/swapperDEV/WeatherAPP",
+    },
   },
 ];

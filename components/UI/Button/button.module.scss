@@ -24,3 +24,21 @@
   color: $content;
   border: 3px solid $content;
 }
+
+@media (max-width: 900px) {
+  .button {
+    font-size: 0.8rem;
+    padding: 10px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .button {
+    font-size: 0.6rem;
+    padding: 8px;
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+}

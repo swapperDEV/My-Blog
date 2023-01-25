@@ -17,11 +17,9 @@ export const Button = ({
     <>
       {!scroll ? (
         <>
-          <button className={styles.button}>
-            <Link href={`${link}`} target="_blank">
-              {children}
-            </Link>
-          </button>
+          <Link href={`${link}`} target="_blank">
+            <button className={styles.button}>{children}</button>
+          </Link>
         </>
       ) : (
         <>

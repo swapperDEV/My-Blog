@@ -2,27 +2,35 @@ import React from "react";
 import { ResponsiveImage } from "../UI/Image/Image";
 import styles from "./blogpreview.module.scss";
 import { FaCalendar, FaInfo } from "react-icons/fa";
-export const BlogPreview = () => {
+export const BlogPreview = ({
+  title,
+  description,
+  creator,
+  src,
+  date,
+}: {
+  title: string;
+  description: string;
+  src: string;
+  creator: string;
+  date: string;
+}) => {
   return (
     <article className={styles.preview}>
       <div className={styles.image}>
-        <ResponsiveImage src={"/assets/blog/previews/rocket.webp"} />
+        <ResponsiveImage src={src} />
       </div>
       <div className={styles.content}>
+        <p className={styles.title}>{title}</p>
+        <p className={styles.description}>{description}</p>
         <div className={styles.info}>
           <p>
-            <FaInfo /> Poradniki
+            <img src={"/assets/avatar.jpg"} width="32" /> {creator}
           </p>
           <p>
-            <FaCalendar /> 12 lipca 2022
+            <FaCalendar /> {date}
           </p>
         </div>
-        <p className={styles.title}>Jak przyspieszyć stronę internetową?</p>
-        <p className={styles.description}>
-          Co zrobić, aby strona internetowa ładowała się szybciej, a tym samym
-          miała niższy współczynnik odrzuceń? Poznaj kilka sposobów, jak to
-          osiągnąć.
-        </p>
       </div>
     </article>
   );

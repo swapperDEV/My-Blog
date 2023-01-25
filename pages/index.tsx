@@ -22,9 +22,13 @@ import { projects } from "../utils/projects";
 import { BlogPreview } from "../components/BlogPreview/BlogPreview";
 import { Contact } from "../components/Contact/Contact";
 import { Footer } from "../components/Footer/Footer";
+import Head from "next/head";
 export default function Page() {
   return (
     <>
+      <Head>
+        <title>Cześć !</title>
+      </Head>
       <Navbar />
       <Header
         id={"start"}
@@ -141,6 +145,8 @@ export default function Page() {
                 {projects.map((project, index) => {
                   return (
                     <Project
+                      live={project.link.live}
+                      code={project.link.code}
                       key={index}
                       stack={
                         <>
@@ -163,13 +169,37 @@ export default function Page() {
         <Section
           title={"Blog"}
           id={"blog"}
-          lowertitle={"Najnowsze aktykuły na blogu 🔥"}
+          lowertitle={"Ostatnie artykuły z bloga 🔥"}
           align="left"
           content={
             <>
-              <BlogPreview />
-              <BlogPreview />
-              <BlogPreview />
+              <BlogPreview
+                title={"Co skłoniło mnie do programowania?"}
+                description={
+                  "Wiele osób, zastanawia się czy to dla nich, lecz po co się zastanawiać jak można się przekonać."
+                }
+                creator={"Wiktor"}
+                date={"12 lipca 2022"}
+                src={"/assets/coding.jpg"}
+              />
+              <BlogPreview
+                title={"Co skłoniło mnie do programowania?"}
+                description={
+                  "Wiele osób, zastanawia się czy to dla nich, lecz po co się zastanawiać jak można się przekonać."
+                }
+                creator={"Wiktor"}
+                src={"/assets/coding.jpg"}
+                date={"12 lipca 2022"}
+              />
+              <BlogPreview
+                title={"Co skłoniło mnie do programowania?"}
+                description={
+                  "Wiele osób, zastanawia się czy to dla nich, lecz po co się zastanawiać jak można się przekonać."
+                }
+                creator={"Wiktor"}
+                src={"/assets/coding.jpg"}
+                date={"12 lipca 2022"}
+              />
             </>
           }
         />

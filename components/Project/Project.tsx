@@ -9,12 +9,16 @@ export const Project = ({
   title,
   description,
   src,
+  live,
+  code,
 }: {
   stack: JSX.Element;
   badge?: boolean;
   title: string;
   description: string;
   src: string;
+  live: string;
+  code: string;
 }) => {
   return (
     <article className={styles.wrapper}>
@@ -28,8 +32,8 @@ export const Project = ({
           <p>{description}</p>
         </div>
         <div className={styles.buttons}>
-          <Button>{<>Odwiedź stronę</>}</Button>
-          <Button>{<>Kod źródłowy</>}</Button>
+          <Button link={live}>{<>Odwiedź stronę</>}</Button>
+          <Button link={code}>{<>Kod źródłowy</>}</Button>
         </div>
       </div>
       <div className={styles.imgPreview}>
