@@ -1,11 +1,17 @@
+import { useState, useEffect } from "react";
 import { Footer } from "../../components/Footer/Footer";
 import { Navbar } from "../../components/Navbar/Navbar";
 import Head from "next/head";
 import { getAllPosts, PostMeta } from "../api/api";
-import Articles from "../../components/Blog/Articles/Articles";
-import { BlogPreview } from "../../components/BlogPreview/BlogPreview";
+import { BlogPreview } from "../../components/Blog/BlogPreview/BlogPreview";
 import { Section } from "../../components/Section/Section";
+import { TagsList } from "../../components/Blog/TagsList/TagsList";
+import { getTags } from "../../utils/gettags";
 export default function Page({ posts }: { posts: PostMeta[] }) {
+  const [tags, setTags] = useState<string[]>([]);
+  useEffect(() => {
+    setTags(getTags(posts));
+  }, []);
   return (
     <>
       <Head>
@@ -20,36 +26,26 @@ export default function Page({ posts }: { posts: PostMeta[] }) {
           align="left"
           content={
             <>
-              <BlogPreview
-                title={"Co skłoniło mnie do programowania?"}
-                description={
-                  "Wiele osób, zastanawia się czy to dla nich, lecz po co się zastanawiać jak można się przekonać."
-                }
-                creator={"Wiktor"}
-                date={"12 lipca 2022"}
-                src={"/assets/coding.jpg"}
-              />
-              <BlogPreview
-                title={"Co skłoniło mnie do programowania?"}
-                description={
-                  "Wiele osób, zastanawia się czy to dla nich, lecz po co się zastanawiać jak można się przekonać."
-                }
-                creator={"Wiktor"}
-                src={"/assets/coding.jpg"}
-                date={"12 lipca 2022"}
-              />
-              <BlogPreview
-                title={"Co skłoniło mnie do programowania?"}
-                description={
-                  "Wiele osób, zastanawia się czy to dla nich, lecz po co się zastanawiać jak można się przekonać."
-                }
-                creator={"Wiktor"}
-                src={"/assets/coding.jpg"}
-                date={"12 lipca 2022"}
-              />
+              {posts &&
+                posts.map((post: PostMeta, index) => {
+                  console.log(post);
+                  return (
+                    <BlogPreview
+                      src={post.img}
+                      slug={post.slug}
+                      title={post.title}
+                      tags={post.tags}
+                      description={post.excerpt}
+                      creator={post.creator}
+                      date={new Date(post.date)}
+                      key={index}
+                    />
+                  );
+                })}
             </>
           }
-        />{" "}
+        />
+        <TagsList tags={tags} />
         <Footer />
       </main>
     </>

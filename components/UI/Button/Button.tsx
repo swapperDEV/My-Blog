@@ -7,23 +7,37 @@ export const Button = ({
   link,
   scroll,
   scrollV,
+  handleClick,
 }: {
   children: JSX.Element;
   link?: string;
   scroll?: boolean;
   scrollV?: string;
+  handleClick?: Function;
 }) => {
   return (
     <>
       {!scroll ? (
         <>
           <Link href={`${link}`} target="_blank">
-            <button className={styles.button}>{children}</button>
+            <button
+              onClick={() => {
+                handleClick && handleClick();
+              }}
+              className={styles.button}
+            >
+              {children}
+            </button>
           </Link>
         </>
       ) : (
         <>
-          <button className={styles.button}>
+          <button
+            onClick={() => {
+              handleClick && handleClick();
+            }}
+            className={styles.button}
+          >
             <LinkScroll smooth spy to={`${scrollV}`}>
               {children}
             </LinkScroll>

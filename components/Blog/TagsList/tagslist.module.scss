@@ -1,0 +1,42 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/fonts.scss";
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: "Rubik", sans-serif;
+  background-color: #f4f9f4;
+  padding-bottom: 50px;
+  flex-direction: row;
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-30px);
+    max-width: 1200px;
+    flex-wrap: wrap;
+    .tag {
+      background-color: $content;
+      color: white;
+      margin-left: 10px;
+      padding: 10px;
+      padding-left: 15px;
+      border-radius: 5px;
+      padding-right: 15px;
+      margin-top: 10px;
+      transition: 0.3s ease;
+    }
+    .tag:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+}

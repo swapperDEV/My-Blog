@@ -1,6 +1,10 @@
 import type { GetStaticProps, GetStaticPaths } from "next";
 import Head from "next/head";
 import Articles from "../../../components/Blog/Articles/Articles";
+import { BlogPreview } from "../../../components/Blog/BlogPreview/BlogPreview";
+import { Footer } from "../../../components/Footer/Footer";
+import { Navbar } from "../../../components/Navbar/Navbar";
+import { Section } from "../../../components/Section/Section";
 import { getAllPosts, PostMeta } from "../../api/api";
 
 export default function TagPage({
@@ -15,8 +19,35 @@ export default function TagPage({
       <Head>
         <title>Tag: {slug}</title>
       </Head>
-      <h1>Tag: {slug}</h1>
-      <Articles posts={posts} />
+      <Navbar />
+      <main>
+        <Section
+          title={"Blog"}
+          id={"blog"}
+          lowertitle={`Artykuły z tagiem ${slug} 📌 `}
+          align="left"
+          content={
+            <>
+              {posts.map((post: PostMeta, index) => {
+                console.log(post);
+                return (
+                  <BlogPreview
+                    src={post.img}
+                    slug={post.slug}
+                    title={post.title}
+                    tags={post.tags}
+                    description={post.excerpt}
+                    creator={post.creator}
+                    date={new Date(post.date)}
+                    key={index}
+                  />
+                );
+              })}
+            </>
+          }
+        />
+        <Footer />
+      </main>
     </>
   );
 }

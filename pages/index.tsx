@@ -19,11 +19,12 @@ import { ProjectsWrapper } from "../components/UI/ProjectsWrapper/ProjectsWrappe
 import { Logo } from "../components/UI/Logo/Logo";
 import { skills } from "../utils/skills";
 import { projects } from "../utils/projects";
-import { BlogPreview } from "../components/BlogPreview/BlogPreview";
+import { BlogPreview } from "../components/Blog/BlogPreview/BlogPreview";
 import { Contact } from "../components/Contact/Contact";
 import { Footer } from "../components/Footer/Footer";
 import Head from "next/head";
-export default function Page() {
+import { getAllPosts, PostMeta } from "./api/api";
+export default function Page({ posts }: { posts: PostMeta[] }) {
   return (
     <>
       <Head>
@@ -173,33 +174,22 @@ export default function Page() {
           align="left"
           content={
             <>
-              <BlogPreview
-                title={"Co skłoniło mnie do programowania?"}
-                description={
-                  "Wiele osób, zastanawia się czy to dla nich, lecz po co się zastanawiać jak można się przekonać."
-                }
-                creator={"Wiktor"}
-                date={"12 lipca 2022"}
-                src={"/assets/coding.jpg"}
-              />
-              <BlogPreview
-                title={"Co skłoniło mnie do programowania?"}
-                description={
-                  "Wiele osób, zastanawia się czy to dla nich, lecz po co się zastanawiać jak można się przekonać."
-                }
-                creator={"Wiktor"}
-                src={"/assets/coding.jpg"}
-                date={"12 lipca 2022"}
-              />
-              <BlogPreview
-                title={"Co skłoniło mnie do programowania?"}
-                description={
-                  "Wiele osób, zastanawia się czy to dla nich, lecz po co się zastanawiać jak można się przekonać."
-                }
-                creator={"Wiktor"}
-                src={"/assets/coding.jpg"}
-                date={"12 lipca 2022"}
-              />
+              {posts &&
+                posts.map((post: PostMeta, index) => {
+                  console.log(post);
+                  return (
+                    <BlogPreview
+                      src={post.img}
+                      slug={post.slug}
+                      title={post.title}
+                      tags={post.tags}
+                      description={post.excerpt}
+                      creator={post.creator}
+                      date={new Date(post.date)}
+                      key={index}
+                    />
+                  );
+                })}
             </>
           }
         />
@@ -210,6 +200,9 @@ export default function Page() {
   );
 }
 
-//https://grzegorzpokorski.pl/o-mnie
-//https://revku.dev/
-//EN VERSION PLS
+export async function getStaticProps() {
+  const posts = getAllPosts()
+    .slice(0, 9)
+    .map((post) => post.meta);
+  return { props: { posts } };
+}

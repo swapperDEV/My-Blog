@@ -60,9 +60,7 @@ export const Navbar = () => {
                       <li key={link.name}>
                         {link.external ? (
                           <>
-                            <li key={link.name}>
-                              <Link href={link.link}>{link.name}</Link>
-                            </li>
+                            <Link href={link.link}>{link.name}</Link>
                           </>
                         ) : (
                           <>

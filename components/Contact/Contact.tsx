@@ -1,10 +1,16 @@
-import React from "react";
+import { useRef } from "react";
 import { Button } from "../UI/Button/Button";
 import { ResponsiveImage } from "../UI/Image/Image";
 import styles from "./contact.module.scss";
 import { FaMailBulk } from "react-icons/fa";
 
 export const Contact = () => {
+  const name = useRef<HTMLInputElement>(null);
+  const surname = useRef<HTMLInputElement>(null);
+  const email = useRef<HTMLInputElement>(null);
+  const message = useRef<HTMLTextAreaElement>(null);
+  const checkbox = useRef<HTMLInputElement>(null);
+  const submitForm = () => {};
   return (
     <div className={styles.wrapper} id="contact">
       <section className={styles.contact}>
@@ -14,30 +20,30 @@ export const Contact = () => {
               <p className={styles.title}>Kontakt</p>
               <div className={styles.line}></div>
               <p className={styles.description}>
-                Jeśli interesuje Cię współpraca nie bój się napisać na mojego
-                maila: <a>wiktormaciazek@gmail.com</a> lub skorzystać z
-                formularza kontaktowego. Zachęcam również do odwiedzenia
-                githuba, bądź do szybszego kontaktu za pomocą discord.
+                Jeśli masz do mnie jakiegolwiek pytanie napisz na maila:{" "}
+                <a>wiktormaciazek@gmail.com</a> lub skorzystaj z formularza
+                kontaktowego. Zachęcam również do odwiedzenia githuba, bądź do
+                szybszego kontaktu za pomocą discord.
               </p>
             </div>
             <div className={styles.input}>
               <label>Imie*</label>
-              <input />
+              <input ref={name} />
             </div>
             <div className={styles.input}>
               <label>Nazwisko*</label>
-              <input />
+              <input ref={surname} />
             </div>
             <div className={styles.input}>
               <label>Email</label>
-              <input type={"email"} />
+              <input ref={email} type={"email"} />
             </div>
             <div className={styles.input}>
               <label>Treść wiadomości</label>
-              <textarea />
+              <textarea ref={message} />
             </div>
             <div className={styles.inputCheck}>
-              <input type="checkbox" />
+              <input ref={checkbox} type="checkbox" />
               <p>
                 Wyrażam zgodę na przechowywanie przez tę witrynę przesłanych
                 przeze mnie informacji, w celu związanym z odpowiedzią na moje
@@ -46,7 +52,7 @@ export const Contact = () => {
               </p>
             </div>
             <div className={styles.buttons}>
-              <Button link="/">
+              <Button link="/" handleClick={submitForm}>
                 {
                   <>
                     Wyślij wiadomość <FaMailBulk />
