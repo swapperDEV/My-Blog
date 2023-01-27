@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./section.module.scss";
-import { Fade, Zoom } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 type SectionProps = {
   title: string;
   lowertitle?: string;
