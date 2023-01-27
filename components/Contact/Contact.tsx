@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { Button } from "../UI/Button/Button";
-import { ResponsiveImage } from "../UI/Image/Image";
 import styles from "./contact.module.scss";
 import { FaMailBulk } from "react-icons/fa";
 
