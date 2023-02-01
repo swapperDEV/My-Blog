@@ -1,6 +1,5 @@
 import type { GetStaticProps, GetStaticPaths } from "next";
 import Head from "next/head";
-import Articles from "../../../components/Blog/Articles/Articles";
 import { BlogPreview } from "../../../components/Blog/BlogPreview/BlogPreview";
 import { Footer } from "../../../components/Footer/Footer";
 import { Navbar } from "../../../components/Navbar/Navbar";
