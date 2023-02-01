@@ -3,9 +3,6 @@ import Image from "next/image";
 import Head from "next/head";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import rehypeSlug from "rehype-slug";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import rehypeHighlight from "rehype-highlight";
 import { YouTube } from "../../components/Blog/Youtube/Youtube";
 import { getPostFromSlug, getSlugs, PostMeta } from "../api/api";
 
