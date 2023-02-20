@@ -93,9 +93,13 @@ export const Navbar = () => {
             </ul>
           </nav>
           <div className={styles.button}>
+            {home ?             
             <PageLink smooth spy to="contact">
               Kontakt
-            </PageLink>
+            </PageLink> 
+            : <Link href={'./'}>
+              Kontakt
+            </Link>}
           </div>
           <div className={styles.burger}>
             <Hamburger
