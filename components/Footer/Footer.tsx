@@ -9,7 +9,9 @@ export const Footer = () => {
             Wiktor <a>Maciążek</a>
           </p>
         </div>
-        <div>Wiktor Maciążek © 2023 for wiktormaciazek.pl.</div>
+        <div className={styles.author}>
+          Wiktor Maciążek © 2023 for wiktormaciazek.pl.
+        </div>
       </footer>
     </section>
   );

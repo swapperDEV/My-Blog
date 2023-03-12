@@ -77,6 +77,7 @@
         text-align: center;
         order: -1;
         width: auto;
+        margin-left: 0px;
         .title {
           p {
             width: 100%;
@@ -92,10 +93,12 @@
   .section {
     .sectionContent {
       width: 600px;
+      img {
+        margin-top: 40px;
+      }
     }
   }
 }
-
 
 @media (max-width: 620px) {
   .section {
@@ -109,6 +112,9 @@
   .section {
     .sectionContent {
       width: 500px;
+      img {
+        margin-top: 60px;
+      }
     }
   }
 }
@@ -125,6 +131,38 @@
   .section {
     .sectionContent {
       width: 400px;
+      .textAlign {
+        .title {
+          margin-bottom: 8px;
+          p {
+            font-size: 1.2rem;
+          }
+        }
+        .lowertitle {
+          font-size: 1.4rem;
+        }
+        .description {
+          font-size: 1rem;
+        }
+      }
+      .text {
+        .title {
+          margin-bottom: 8px;
+          p {
+            font-size: 1.2rem;
+          }
+        }
+        .lowertitle {
+          font-size: 1.4rem;
+        }
+        .description {
+          font-size: 0.9rem;
+        }
+      }
+
+      img {
+        margin-top: 80px;
+      }
     }
   }
 }

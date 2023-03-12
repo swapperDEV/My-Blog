@@ -28,3 +28,27 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .footer {
+    width: 100%;
+    .author {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      text-align: right;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .footer {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    .title {
+      width: auto;
+      flex-grow: 1;
+    }
+  }
+}

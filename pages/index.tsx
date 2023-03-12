@@ -30,9 +30,10 @@ export default function Page({ posts }: { posts: PostMeta[] }) {
       <Head>
         <title>Cześć !</title>
       </Head>
+      <div id={"start"}></div>
       <Navbar />
       <Header
-        id={"start"}
+        id={"starts"}
         titleFirst={
           <>
             Cześć, jestem <a>Wiktor</a>

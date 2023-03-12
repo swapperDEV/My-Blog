@@ -39,6 +39,10 @@ export const Project = ({
       <div className={styles.imgPreview}>
         <img src={src} alt={"mockup"} />
       </div>
+      <div className={styles.mobilebuttons}>
+        <Button link={live}>{<>Odwiedź stronę</>}</Button>
+        <Button link={code}>{<>Kod źródłowy</>}</Button>
+      </div>
     </article>
   );
 };

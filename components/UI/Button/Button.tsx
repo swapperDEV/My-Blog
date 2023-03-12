@@ -19,7 +19,21 @@ export const Button = ({
     <>
       {!scroll ? (
         <>
-          <Link href={`${link}`} target="_blank">
+          {link ? (
+            <>
+              {" "}
+              <Link href={`${link}`} target="_blank">
+                <button
+                  onClick={() => {
+                    handleClick && handleClick();
+                  }}
+                  className={styles.button}
+                >
+                  {children}
+                </button>
+              </Link>
+            </>
+          ) : (
             <button
               onClick={() => {
                 handleClick && handleClick();
@@ -28,7 +42,7 @@ export const Button = ({
             >
               {children}
             </button>
-          </Link>
+          )}
         </>
       ) : (
         <>

@@ -12,7 +12,6 @@
   background-attachment: fixed;
   background-position: top;
   .contact {
-    width: 1200px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -120,6 +119,156 @@
   button {
     svg {
       margin-left: 6px;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .contact {
+      width: 90%;
+      display: flex;
+      .bottom {
+        .form {
+          width: 600px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 662px) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .contact {
+      width: 90%;
+      display: flex;
+      .bottom {
+        .form {
+          width: 550px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  .wrapper {
+    .contact {
+      .bottom {
+        .form {
+          width: 450px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 481px) {
+  .wrapper {
+    .contact {
+      .info {
+        padding-top: 20px;
+        .description {
+          font-size: 0.9rem;
+        }
+      }
+      .bottom {
+        .form {
+          width: 400px;
+        }
+      }
+    }
+  }
+  .inputCheck {
+    p {
+      font-size: 0.8rem !important;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .wrapper {
+    .contact {
+      .info {
+        padding-top: 20px;
+        .description {
+          font-size: 0.9rem;
+        }
+      }
+      .bottom {
+        .form {
+          width: 350px;
+        }
+      }
+    }
+  }
+  .inputCheck {
+    p {
+      font-size: 0.8rem !important;
+    }
+  }
+}
+
+@media (max-width: 376px) {
+  .wrapper {
+    .contact {
+      .info {
+        padding-top: 20px;
+        .title {
+          font-size: 1rem;
+        }
+        .line {
+          width: 40px;
+        }
+        .description {
+          font-size: 0.8rem;
+        }
+      }
+      .bottom {
+        .form {
+          width: 310px;
+        }
+      }
+    }
+  }
+  .inputCheck {
+    p {
+      font-size: 0.8rem !important;
+    }
+  }
+}
+
+@media (max-width: 325px) {
+  .wrapper {
+    .contact {
+      .info {
+        padding-top: 20px;
+        .title {
+          font-size: 1rem;
+        }
+        .line {
+          width: 40px;
+        }
+        .description {
+          font-size: 0.8rem;
+        }
+      }
+      .bottom {
+        .form {
+          width: 270px;
+        }
+      }
+    }
+  }
+  .inputCheck {
+    p {
+      font-size: 0.8rem !important;
     }
   }
 }

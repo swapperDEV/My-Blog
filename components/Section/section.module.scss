@@ -84,10 +84,29 @@
   }
 }
 
+@media (max-width: 1310px) {
+  .section {
+    .sectionContent {
+      .content {
+        padding-top: 50px;
+      }
+      .textAlign {
+        padding-left: 50px;
+      }
+    }
+  }
+}
+
 @media (max-width: 1210px) {
   .section {
     .sectionContent {
       width: 1000px;
+      .textAlign {
+        margin-left: 0px;
+        padding-left: 30px;
+        width: 100%;
+        transform: translateY(30px);
+      }
     }
   }
 }
@@ -118,12 +137,12 @@
 
 @media (max-width: 720px) {
   .section {
+    padding-bottom: 50px;
     .sectionContent {
       width: 600px;
     }
   }
 }
-
 
 @media (max-width: 620px) {
   .section {
@@ -153,6 +172,34 @@
   .section {
     .sectionContent {
       width: 400px;
+      .textAlign {
+        .title {
+          margin-bottom: 8px;
+          p {
+            font-size: 1.2rem;
+          }
+        }
+        .lowertitle {
+          font-size: 1.4rem;
+        }
+        .description {
+          font-size: 1rem;
+        }
+      }
+      .text {
+        .title {
+          margin-bottom: 8px;
+          p {
+            font-size: 1.2rem;
+          }
+        }
+        .lowertitle {
+          font-size: 1.4rem;
+        }
+        .description {
+          font-size: 1rem;
+        }
+      }
     }
   }
 }
@@ -177,6 +224,27 @@
   .section {
     .sectionContent {
       width: 250px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .section {
+    .sectionContent {
+      .textAlign {
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .section {
+    .sectionContent {
+      .textAlign {
+        width: 80%;
+        padding-left: 10px;
+      }
     }
   }
 }

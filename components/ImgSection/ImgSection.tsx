@@ -28,7 +28,7 @@ export const ImgSection = ({
           </div>
           <p className={styles.lowertitle}>{lowertitle}</p>
           <p className={styles.description}>{description}</p>
-          <Button>
+          <Button link="/cv">
             <>{button}</>
           </Button>
         </div>

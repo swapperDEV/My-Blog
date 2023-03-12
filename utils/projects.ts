@@ -36,7 +36,7 @@ export const projects = [
     },
   },
   {
-    title: "Browser Star-Page",
+    title: "Start-Page",
     badge: false,
     description:
       "Ten projekt to idealny dashboard do twojej przeglądarki, może służyć jako wielofunkcyjna strona startowa.",
